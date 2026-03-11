@@ -20,14 +20,14 @@ Amazon SageMaker. la aplicacion utiliza **AWS Bedrock** -> (Anthropic Claude) pa
 
 
 
-## 📋 Requisitos Previos
+##  Requisitos Previos
 
 1. Tener Docker instalado.
 2. Contar con credenciales de AWS configuradas (IAM User con acceso a Bedrock).
 
-## 🚀 Cómo Ejecutar el Proyecto
+##  Cómo Ejecutar el Proyecto
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone <URL_DE_TU_REPOSITORIO>
+   git clone <URL_DE_EL_REPOSITORIO>
    cd LLM
