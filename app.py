@@ -10,7 +10,13 @@ load_dotenv()
 # 2. Configuración del modelo: Definimos qué IA usaremos y cómo debe comportarse
 # MODEL_ID apunta al modelo en AWS Bedrock.
 # SYSTEM_PROMPT es el "manual de instrucciones" que define la personalidad y estructura del asistente.
-MODEL_ID = os.getenv("MODEL_ID", "arn:aws:bedrock:us-east-1:385208337656:inference-profile/us.anthropic.claude-sonnet-4-6")
+load_dotenv()
+
+# Si MODEL_ID no está en el .env, el programa se detiene para avisarte
+MODEL_ID = os.getenv("MODEL_ID")
+if not MODEL_ID:
+    st.error("Error: La variable de entorno MODEL_ID no está configurada en el archivo .env")
+    st.stop()
 SYSTEM_PROMPT = """
 Eres un mentor experto en Amazon SageMaker y en la certificación AWS Certified AI Practitioner.
 Tu misión es transformar conceptos complejos de Machine Learning en conocimiento sencillo y accionable.
